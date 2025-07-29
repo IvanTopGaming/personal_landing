@@ -8,23 +8,22 @@ html(lang="en")
     link(rel="preconnect", href="https://fonts.googleapis.com")
     link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
     link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap", rel="stylesheet")
-    // Add Font Awesome for social media icons
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
   body(class="bg-gray-900 text-white font-sans")
 
     // Header
     section(class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4" style="background-image: url('/images/hero-bg.jpg')")
-      h1.text-5xl.md.text-6xl.font-bold.mb-4 Hello, I'm 
+      h1(class="text-5xl md:text-6xl font-bold mb-4") Hello, I'm 
         span.text-yellow-400 ITG
       p.text-lg.max-w-xl.text-gray-300.mb-8 A passionate system administrator and network engineer dedicated to building and maintaining robust digital infrastructures.
       a(href="#about" class="mt-4 inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-full text-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105")
         | To learn more
         i(class="fas fa-arrow-down ml-2")
 
-    // About - Добавлен ID 'about'
+    // About
     section(id="about" class="py-20 px-6 max-w-5xl mx-auto")
       h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 Who I Am
-      div.flex.flex-col.md.flex-row.items-center.gap-10
+      div(class="flex flex-col md:flex-row items-center gap-10")
         img(src="/images/profile.jpg" alt="Profile" class="w-60 h-60 object-cover rounded-full border-4 border-yellow-500")
         div
           h3.text-2xl.font-semibold.mb-2 It's a pleasure to meet you! I'm Ivan.
@@ -38,7 +37,7 @@ html(lang="en")
     // Services
     section(class="py-20 px-6 bg-gray-800")
       h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 What I Do
-      div.grid.grid-cols-1.md.grid-cols-3.gap-6.max-w-6xl.mx-auto
+      div(class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto")
         div.bg-gray-900.p-6.rounded-lg.shadow-md
           h3.text-xl.font-semibold.mb-2 Docker Proficiency
           p.text-sm.text-gray-400 With extensive experience in Docker, I excel at crafting Dockerfiles and creating optimized container images for various applications.
@@ -66,7 +65,7 @@ html(lang="en")
     // GitHub Projects
     section(class="py-20 px-6 bg-gray-800")
         h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 My GitHub Projects
-        div.grid.grid-cols-1.md.grid-cols-2.lg.grid-cols-3.gap-8.max-w-6xl.mx-auto
+        div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto")
             div.bg-gray-900.p-6.rounded-lg.shadow-md
                 h3.text-xl.font-semibold.mb-2 Minecraft Docker Image
                 p.text-sm.text-gray-400.mb-4 This Docker image provides a ready-to-use Minecraft server, configured for easy deployment and customization.
