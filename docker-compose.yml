@@ -1,0 +1,14 @@
+services:
+  landing:
+    build: .
+    container_name: landing
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - ./_logs:/root/.npm/_logs/
+    networks:
+      - caddy
+
+networks:
+  caddy:
+    external: true

@@ -1,0 +1,6 @@
+.git
+.excluded_files
+_logs/
+node_modules/
+style.css
+output.txt

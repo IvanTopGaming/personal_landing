@@ -1,0 +1,95 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Jhon Doe - Portfolio
+    link(rel="stylesheet", href="/styles/style.css")
+    link(rel="preconnect", href="https://fonts.googleapis.com")
+    link(rel="preconnect", href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap", rel="stylesheet")
+    // Add Font Awesome for social media icons
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+  body(class="bg-gray-900 text-white font-sans")
+
+    // Header
+    section(class="min-h-screen bg-cover bg-center flex flex-col justify-center items-center text-center px-4" style="background-image: url('/images/hero-bg.jpg')")
+      h1.text-5xl.md.text-6xl.font-bold.mb-4 Hello, I'm 
+        span.text-yellow-400 ITG
+      p.text-lg.max-w-xl.text-gray-300.mb-8 A passionate system administrator and network engineer dedicated to building and maintaining robust digital infrastructures.
+      a(href="#about" class="mt-4 inline-block bg-yellow-500 text-black font-bold px-6 py-3 rounded-full text-lg hover:bg-yellow-600 transition duration-300 ease-in-out transform hover:scale-105")
+        | To learn more
+        i(class="fas fa-arrow-down ml-2")
+
+    // About - Добавлен ID 'about'
+    section(id="about" class="py-20 px-6 max-w-5xl mx-auto")
+      h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 Who I Am
+      div.flex.flex-col.md.flex-row.items-center.gap-10
+        img(src="/images/profile.jpg" alt="Profile" class="w-60 h-60 object-cover rounded-full border-4 border-yellow-500")
+        div
+          h3.text-2xl.font-semibold.mb-2 It's a pleasure to meet you! I'm Ivan.
+          h4.text-yellow-400.mb-4 System Administrator & Network Engineer
+          p.text-gray-300.mb-4 I specialist in modern IT solutions. Deeply involved in ensuring network security and performance.
+          ul.text-sm.text-gray-400
+            li Email: zjarc0@mail.ru
+            li Location: Moscow, Russia
+          a.mt-4.inline-block.bg-yellow-500.text-black.font-bold.px-4.py-2.rounded-full(href="#contact") Get In Touch
+
+    // Services
+    section(class="py-20 px-6 bg-gray-800")
+      h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 What I Do
+      div.grid.grid-cols-1.md.grid-cols-3.gap-6.max-w-6xl.mx-auto
+        div.bg-gray-900.p-6.rounded-lg.shadow-md
+          h3.text-xl.font-semibold.mb-2 Docker Proficiency
+          p.text-sm.text-gray-400 With extensive experience in Docker, I excel at crafting Dockerfiles and creating optimized container images for various applications.
+
+        div.bg-gray-900.p-6.rounded-lg.shadow-md
+          h3.text-xl.font-semibold.mb-2 OS & Firewall Configuration
+          p.text-sm.text-gray-400 I adeptly handle a wide range of tasks involving operating system setup, firewall management, and other critical configurations.
+
+        div.bg-gray-900.p-6.rounded-lg.shadow-md
+          h3.text-xl.font-semibold.mb-2 Python Scripting
+          p.text-sm.text-gray-400 My intermediate Python skills enable me to develop practical scripts for automating repetitive tasks and improving workflow efficiency.
+
+    // Skills
+    section(class="py-20 px-6 max-w-5xl mx-auto")
+      h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 My Skills
+      div.space-y-4
+        each skill in [{name: 'Dockerfile', value: 90}, {name: 'Shell', value: 80}, {name: 'Python', value: 60}]
+          div
+            div.flex.justify-between.text-sm.mb-1
+              span.text-white= skill.name
+              span.text-gray-400= skill.value + '%'
+            div.w-full.bg-gray-700.h-2.rounded-full
+              div.bg-yellow-500.h-2.rounded-full(style=`width: ${skill.value}%`)
+
+    // GitHub Projects
+    section(class="py-20 px-6 bg-gray-800")
+        h2.text-4xl.font-bold.mb-12.text-center.text-yellow-400 My GitHub Projects
+        div.grid.grid-cols-1.md.grid-cols-2.lg.grid-cols-3.gap-8.max-w-6xl.mx-auto
+            div.bg-gray-900.p-6.rounded-lg.shadow-md
+                h3.text-xl.font-semibold.mb-2 Minecraft Docker Image
+                p.text-sm.text-gray-400.mb-4 This Docker image provides a ready-to-use Minecraft server, configured for easy deployment and customization.
+                a(href="https://github.com/IvanTopGaming/ITG_minecraft_docker-image" target="_blank" class="text-yellow-400 hover:underline") View on GitHub
+            div.bg-gray-900.p-6.rounded-lg.shadow-md
+                h3.text-xl.font-semibold.mb-2 Mini GraalVM In Docker
+                p.text-sm.text-gray-400.mb-4 Minimalistic GraalVM Community Edition images for various Java versions (21, 24, 25), designed for compact and fast launch of Java applications, as well as assembly of native images using GraalVM Native Image.
+                a(href="https://github.com/IvanTopGaming/ITG_MiniDocker_GraalVM" target="_blank" class="text-yellow-400 hover:underline") View on GitHub
+            div.bg-gray-900.p-6.rounded-lg.shadow-md
+                h3.text-xl.font-semibold.mb-2 ITG Minecraft Protocol
+                p.text-sm.text-gray-400.mb-4 A protocol for interacting with Minecraft servers, enabling custom client-server communication in python. (Under development)
+                a(href="https://github.com/IvanTopGaming/ITG_minecraft_protocol" target="_blank" class="text-yellow-400 hover:underline") View on GitHub
+
+    // Contact Me
+    section(id="contact" class="py-20 px-6 max-w-5xl mx-auto text-center")
+      h2.text-4xl.font-bold.mb-4.text-yellow-400 Connect With Me
+      p.text-lg.text-gray-300.mb-8 I'm currently available for new opportunities.
+      div.flex.justify-center.space-x-6
+        a(href="https://github.com/IvanTopGaming" class="text-gray-400 hover:text-yellow-400")
+            i(class="fab fa-github fa-2x")
+        a(href="https://discord.com/users/712631530002055169" class="text-gray-400 hover:text-yellow-400")
+            i(class="fab fa-discord fa-2x")
+        a(href="mailto:zjarc0@mail.ru" class="text-gray-400 hover:text-yellow-400")
+            i(class="fas fa-envelope fa-2x")
+        a(href="https://t.me/Xustan" class="text-gray-400 hover:text-yellow-400")
+            i(class="fab fa-telegram fa-2x")

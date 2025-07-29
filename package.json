@@ -1,0 +1,17 @@
+{
+  "name": "itg-landing",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./public/styles/tailwind.css -o ./public/styles/style.css"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.31",
+    "autoprefixer": "^10.4.16"
+  }
+}
